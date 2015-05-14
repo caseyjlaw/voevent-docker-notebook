@@ -6,6 +6,6 @@
 
 ##To use (in directory with Dockerfile):
 
-''docker build -t notebook .''
-''docker run -d -p 8888:8888 -v ~/jupyter-notebooks/:/ipynb notebook''
+`docker build -t notebook .`
+`docker run -d -p 8888:8888 -v ~/jupyter-notebooks/:/ipynb notebook`
  
