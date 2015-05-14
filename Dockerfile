@@ -23,6 +23,5 @@ RUN pip install ipython --upgrade
 RUN pip install tornado --upgrade
 RUN pip install jsonschema
 WORKDIR /ipynb
-#ENTRYPOINT ["/bin/bash"]
 CMD ipython notebook --no-browser --ip=0.0.0.0
 EXPOSE 8888
