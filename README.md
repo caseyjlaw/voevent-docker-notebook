@@ -7,4 +7,4 @@ docker build -t notebook .
 docker run -d -p 8888:8888 -v ~/jupyter-notebooks/:/ipynb notebook
 ```
 
-Then connect from browser by loading http://192.168.59.103:8888.
+Then connect from browser by loading http://localhost:8888.
