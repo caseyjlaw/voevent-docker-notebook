@@ -1,6 +1,6 @@
 # IPython notebook running in specific environment
 # Test for HotwiredIV
-# Running the image allows one to connect from browser via http://192.168.59.103:8888.
+# Running the image allows one to connect from browser via http://localhost:8888.
 #
 # To use (in directory with Dockerfile):
 # docker build -t notebook .
@@ -20,8 +20,9 @@ RUN apt-get update && apt-get -y install \
 RUN pip install voevent-parse
 RUN pip install comet
 RUN pip install ipython --upgrade
+RUN pip install jupyter
 RUN pip install tornado --upgrade
 RUN pip install jsonschema
 WORKDIR /ipynb
-CMD ipython notebook --no-browser --ip=0.0.0.0
+CMD jupyter notebook --no-browser --ip=0.0.0.0
 EXPOSE 8888
