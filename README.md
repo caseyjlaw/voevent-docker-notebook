@@ -1,6 +1,6 @@
-###IPython notebook running in specific environment
+### IPython notebook running in specific environment
 
-###To use do the following in directory with Dockerfile:
+### To use do the following in directory with Dockerfile:
 
 ```
 docker build -t notebook .
