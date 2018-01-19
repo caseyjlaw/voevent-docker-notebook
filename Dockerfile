@@ -17,6 +17,7 @@ RUN apt-get update && apt-get -y install \
     ipython \
     python-zmq \
     python-jinja2
+RUN pip install --upgrade pip
 RUN pip install voevent-parse
 RUN pip install comet
 RUN pip install ipython --upgrade
@@ -24,5 +25,5 @@ RUN pip install jupyter
 RUN pip install tornado --upgrade
 RUN pip install jsonschema
 WORKDIR /ipynb
-CMD jupyter notebook --no-browser --ip=0.0.0.0
+CMD jupyter notebook --no-browser --ip=0.0.0.0 --allow-root
 EXPOSE 8888
